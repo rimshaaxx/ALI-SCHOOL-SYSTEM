@@ -1,0 +1,612 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; }
+
+/* Header */
+header {
+  background: #4da6ff;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 50px;
+  margin-right: 10px;
+}
+.school-name h1 {
+  font-size: 1.2em;
+  margin: 0;
+}
+.school-name .tagline {
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1100;
+}
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Nav Menu */
+.nav-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 260px;
+  height: 100%;
+  background: #004080;
+  transition: right 0.4s ease;
+  padding-top: 100px;
+  z-index: 1050;
+}
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+}
+.nav-menu ul li {
+  margin: 20px 0;
+  text-align: center;
+}
+.nav-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.nav-menu ul li a:hover {
+  color: #ffcc00;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease;
+  z-index: 1000;
+}
+
+/* Active States */
+.nav-menu.active { right: 0; }
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
+
+.hero-carousel {
+  position: relative;
+  height: 100vh; /* full screen height */
+  overflow: hidden;
+}
+
+.carousel {
+  position: relative;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.slide.active { opacity: 1; }
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ensures all images fill the area evenly */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+  background: rgba(0,0,0,0.4);
+  padding: 50px;
+  border-radius: 30px;
+}
+
+.hero-overlay h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  animation: fadeInDown 1s ease forwards;
+}
+
+
+.typing {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #ffcc00;
+  width: 0;
+  animation: typing 5s steps(40, end) forwards, blink 0.7s infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+
+.hero-overlay .btn {
+  animation: fadeIn 2s ease forwards;
+}
+
+.btn {
+  background: #ffcc00;
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+.btn:hover { transform: scale(1.1); }
+/* Keyframes */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+/* Dots */
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 3;
+}
+.dot {
+  width: 12px; height: 12px;
+  background: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.dot.active { background: #ffcc00; }
+.about-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(to bottom, #f0f8ff, #ffffff);
+  position: relative;
+}
+
+.section-title {
+  font-size: 2.5em;
+  color: #004080;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: fadeDown 1s forwards;
+}
+
+.about-text {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #333;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1.5s forwards;
+  animation-delay: 0.5s;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  background: #d079f828;
+  padding: 30px;
+  border-radius: 10px;
+  min-width: 180px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.stat-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.stat-box h3 {
+  font-size: 2.5em;
+  color: #4265ffd5;
+  margin-bottom: 10px;
+}
+
+.stat-box p {
+  font-weight: bold;
+  color: #333;
+}
+
+.stat-box.tagline {
+  background-color: #a0cdfa21;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ff6600;
+  animation: pulse 2s infinite;
+}
+
+/* Animations */
+@keyframes fadeDown {
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+
+/* Sections */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+.section.alt { background: #f0f8ff; }
+.section h2 { color: #004080; margin-bottom: 20px; }
+
+/* Academic Programs */
+.programs {
+  background: #e3eafa;
+  padding: 80px 20px;
+}
+
+.section-title {
+  font-size: 2.5em;
+  color: #004080;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.program-cards {
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.program-card {
+  background-color: rgba(189, 126, 248, 0.267) ;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.program-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.program-card h3 {
+  color: #004080;
+  margin-bottom: 10px;
+}
+.program-card p {
+  color: #333;
+  font-size: 0.95em;
+}
+
+.admission-info {
+  text-align: center;
+  background: linear-gradient(135deg, #4da6ff, #004080);
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  animation: fadeInUp 1.5s ease;
+}
+.admission-info h3 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+.admission-info p {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+.admission-info .btn {
+  background: #ffcc00;
+  color: black;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+.admission-info .btn:hover {
+  transform: scale(1.1);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Campuses Section */
+.campuses {
+  background: #f9fbff;
+  padding: 80px 20px;
+}
+
+.campus-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.campus-card {
+  background: rgba(246, 146, 255, 0.24);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.campus-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.campus-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.campus-info {
+  padding: 20px;
+  text-align: center;
+}
+.campus-info h3 {
+  color: #004080;
+  margin-bottom: 10px;
+}
+.campus-info p {
+  margin: 5px 0;
+  color: #333;
+}
+/* Contact Section */
+.contact {
+  background: #f0f8ff;
+  padding: 80px 20px;
+}
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.contact-card {
+  background: rgba(232, 141, 250, 0.164);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.contact-card h3 {
+  color: #004080;
+  margin-bottom: 10px;
+}
+.contact-card p {
+  margin: 5px 0;
+  color: #333;
+}
+.contact-card a {
+  color: #004080;
+  text-decoration: none;
+  font-weight: bold;
+}
+.contact-card a:hover {
+  color: #ff6600;
+}
+.map {
+  margin-top: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+
+
+
+/* Simple Footer Bottom */
+.footer-bottom {
+  background: #004080;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+  margin-top: 40px;
+}
+
+
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+/* ===========================
+   Responsive Adjustments
+   =========================== */
+
+/* For tablets and below */
+@media (max-width: 992px) {
+  header {
+    flex-direction: row;
+    padding: 10px 20px;
+  }
+  .school-name h1 {
+    font-size: 1em;
+  }
+  .school-name .tagline {
+    font-size: 0.7em;
+  }
+  .hero-overlay h2 {
+    font-size: 1.8em;
+  }
+  .hero-overlay p {
+    font-size: 1em;
+  }
+  .btn {
+    padding: 8px 18px;
+    font-size: 0.9em;
+  }
+  .program-cards, .campus-cards, .contact-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* For phones */
+@media (max-width: 600px) {
+  @media (max-width: 600px) {
+  header {
+    flex-direction: row;       /* keep items in a row */
+    justify-content: space-between; /* logo left, hamburger right */
+    align-items: center;
+  }
+
+  .branding {
+    flex-direction: row;       /* logo + text stay side by side */
+    align-items: center;
+  }
+
+  .logo {
+    width: 40px;
+    margin-right: 8px;
+  }
+
+  .school-name h1 {
+    font-size: 0.9em;
+  }
+  .school-name .tagline {
+    font-size: 0.7em;
+  }
+
+  .hamburger {
+    margin-left: auto; /* pushes hamburger to the far right */
+  }
+}
+
+  /* Hero */
+  .hero-overlay {
+    width: 90%;
+    padding: 20px;
+  }
+  .hero-overlay h2 {
+    font-size: 1.5em;
+  }
+  .hero-overlay p {
+    font-size: 0.9em;
+  }
+  .btn {
+    font-size: 0.85em;
+    padding: 8px 15px;
+  }
+
+  /* Sections */
+  .section {
+    padding: 50px 15px;
+  }
+  .about-text {
+    font-size: 0.95em;
+    line-height: 1.6;
+  }
+
+  /* Cards stack */
+  .program-cards, .campus-cards, .contact-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Stats */
+  .stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Footer */
+  .footer-bottom {
+    font-size: 0.8em;
+    padding: 12px;
+  }
+}
