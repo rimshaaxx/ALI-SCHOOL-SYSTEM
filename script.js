@@ -100,8 +100,6 @@ const animationObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('animated');
-    } else {
-      entry.target.classList.remove('animated'); // reset so it can re-trigger
     }
   });
 }, {
@@ -202,3 +200,4 @@ function deleteReview(index) {
   localStorage.setItem('reviews', JSON.stringify(reviews));
   loadReviews();
 }
+
