@@ -9,11 +9,11 @@
 <body>
 
   <header>
-  <div class="branding">
+  <div class="branding" >
     <img src="ass-logo.png" alt="School Logo" class="logo">
     <div class="school-name">
       <h1>ALI KIDS CAMPUS & SCHOOL SYSTEM</h1>
-      <p class="tagline">WHERE EVERY STEP LEADS TO SOMETHING GREATER</p>
+      <p class="tagline">A SIGN OF QUALITY EDUCATION SINCE 1997</p>
     </div>
   </div>
 
@@ -56,12 +56,16 @@
     </div>
 
     <!-- Overlay text -->
-    <div class="hero-overlay">
-      <h2>Welcome to ALI KIDS CAMPUS & SCHOOL SYSTEM</h2>
-      <p class="typing">WHERE EVERY STEP LEADS TO SOMETHING GREATER</p>
+    
+    <div class=" hero-overlay" >
+      <div class="animate-on-scroll">
+      <h2 >Welcome to ALI KIDS CAMPUS & SCHOOL SYSTEM</h2>
+      </div>
+      <p class="typing animate-on-scroll">WHERE EVERY STEP LEADS TO SOMETHING GREATER</p>
       <br>
       <a href="#about" class="btn">Discover More</a>
     </div>
+    
 
     <!-- Dots -->
     <div class="dots">
@@ -71,7 +75,7 @@
     </div>
   </section>
 
-  <section id="about" class="about-section">
+  <section id="about" class="about-section animate-on-scroll">
   <h2 class="section-title">About Us</h2>
   <p class="about-text">
     At <strong>ALI KIDS CAMPUS & SCHOOL SYSTEM</strong>, we believe that every child carries within them the spark of greatness waiting to be nurtured. Since our founding in 1997, our mission has been to provide a safe, inspiring, and intellectually stimulating environment where students are encouraged to explore, question, and grow into confident individuals. Guided by the vision of shaping future leaders with strong values, creativity, and academic excellence, we strive to blend modern teaching methods with a deep respect for cultural and moral foundations. Under the dedicated leadership of <strong>Principal Ali Raza</strong>, our school continues to uphold its reputation as <em>“A Sign of Quality Education”</em>, ensuring that each student not only excels in academics but also develops the character and resilience needed to thrive in life.
@@ -79,14 +83,14 @@
 
   <div class="stats">
     <div class="stat-box">
-      <h3 id="students">500+</h3>
+      <h3 id="students">0</h3>
       <p>Students</p>
     </div>
     <div class="stat-box tagline">
       <p>A SIGN OF QUALITY EDUCATION SINCE 1997</p>
     </div>
     <div class="stat-box">
-      <h3 id="teachers">20+</h3>
+      <h3 id="teachers">0</h3>
       <p>Teachers</p>
     </div>
   </div>
@@ -94,7 +98,7 @@
 
 
  <!-- Academic Programs Section -->
-<section id="programs" class="section programs">
+<section id="programs" class="section programs animate-on-scroll">
   <h2 class="section-title">Academic Programs</h2>
   <p class="section-subtitle">From Playgroup to Matric — nurturing every step of the journey</p>
 
@@ -125,13 +129,13 @@
 </section>
 
 <!-- Campuses Section -->
-<section id="campuses" class="section campuses">
+<section id="campuses" class="section campuses animate-on-scroll">
   <h2 class="section-title">Our Campuses</h2>
   <p class="section-subtitle">Visit any of our campuses to experience quality education up close</p>
 
   <div class="campus-cards">
     <!-- Campus 1 -->
-    <div class="campus-card">
+    <div class="campus-card animate-on-scroll">
       <img src="school1.jpg" alt="Allama Iqbal Town Campus">
       <div class="campus-info">
         <h3>Allama Iqbal Town Campus</h3>
@@ -141,7 +145,7 @@
     </div>
 
     <!-- Campus 2 -->
-    <div class="campus-card">
+    <div class="campus-card animate-on-scroll">
       <img src="school2.jpg" alt="Mustafa Town Campus">
       <div class="campus-info">
         <h3>Mustafa Town Campus</h3>
@@ -154,13 +158,13 @@
 
 
   <<!-- Contact Section -->
-<section id="contact" class="section contact">
+<section id="contact" class="section contact animate-on-scroll">
   <h2 class="section-title">Contact Us</h2>
   <p class="section-subtitle">Reach out to any of our campuses directly</p>
 
   <div class="contact-cards">
     <!-- Campus 1 -->
-    <div class="contact-card">
+    <div class="contact-card animate-on-scroll">
       <h3>Allama Iqbal Town Campus</h3>
       <p>989 Ravi Block, Allama Iqbal Town, Lahore</p>
       <p><strong>Phone:</strong> <a href="tel:03028886368">0302-8886368</a></p>
@@ -173,19 +177,43 @@
     </div>
 
     <!-- Campus 2 -->
-    <div class="contact-card">
+    <div class="contact-card animate-on-scroll">
       <h3>Mustafa Town Campus</h3>
       <p>30 Hadyat Ullah Block, Mustafa Town, Lahore</p>
       <p><strong>Phone:</strong> <a href="tel:03154558227">0315-4558227</a></p>
       <div class="map">
         <iframe 
           src="https://www.google.com/maps?q=30+Hadyat+Ullah+Block+Mustafa+Town+Lahore&output=embed" 
-          width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+          width="100%" height="250" style="border:0;" allowfullscreen="" loading= "fast">
         </iframe>
       </div>
     </div>
   </div>
 </section>
+
+<section id="reviews" class="section reviews">
+  <h2 class="section-title">Share Your Experience ✨</h2>
+  
+  <div class="review-form">
+    <div class="stars">
+      <span data-value="1">★</span>
+      <span data-value="2">★</span>
+      <span data-value="3">★</span>
+      <span data-value="4">★</span>
+      <span data-value="5">★</span>
+    </div>
+    <textarea id="review-text" placeholder="Leave a comment… 🌸"></textarea>
+    <button id="submit-review" class="btn">Post Review</button>
+  </div>
+
+  <div id="review-list" class="review-list">
+    <!-- Reviews will appear here -->
+  </div>
+</section>
+
+
+
+
 
 <!-- Footer -->
 <footer class="footer-bottom">
@@ -195,4 +223,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
