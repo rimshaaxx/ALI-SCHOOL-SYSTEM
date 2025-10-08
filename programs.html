@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Programs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css" />
+    <style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #fdfdfd, #f0f8ff);
+    color: #333;
+  }
+
+  .programs-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+  }
+
+  main h1, h2 {
+    font-size: 32px;
+    color: #ff1493;
+    margin-bottom: 20px;
+    position: relative;
+    text-decoration: underline;
+    text-decoration-color: rgb(255, 208, 0);
+    
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+
+  .section {
+    padding: 60px 20px;
+    transition: background 0.5s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+  }
+
+  .section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .section:nth-child(odd) {
+    background: linear-gradient(to right, #ffe4e1, #fff0f5);
+  }
+
+  .section:nth-child(even) {
+    background: linear-gradient(to right, #e0ffff, #f0fff0);
+  }
+
+  .program-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+
+  .program-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .program-card:hover {
+    transform: scale(1.05);
+    background-color: #f0f8ff;
+  }
+
+  .subject-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .subject-box {
+    background-color: #e6f2ff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .subject-box:hover {
+    background-color: #d0e7ff;
+    transform: scale(1.05);
+  }
+
+  .timeline {
+    position: relative;
+    margin-top: 40px;
+    padding-left: 30px;
+    border-left: 3px solid #ff1493;
+  }
+
+  .timeline-step {
+    margin-bottom: 30px;
+    position: relative;
+  }
+
+  .timeline-step::before {
+    
+    position: absolute;
+    left: -25px;
+    top: 0;
+    font-size: 20px;
+  }
+
+  .experience-box {
+    background-color: #fff8e1;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+  }
+
+  .experience-box:hover {
+    transform: scale(1.02);
+  }
+
+  .cta {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 40px;
+  }
+
+  .cta a {
+    background: linear-gradient(to right, #ff69b4, #ff1493);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .cta a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.7);
+  }
+  [data-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+[data-animate].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+</style>
+
+
+</head>
+<body>
+    <header>
+  <div class="branding" >
+    <img src="ass-logo.png" alt="School Logo" class="logo">
+    <div class="school-name">
+      <h1>ALI KIDS CAMPUS & SCHOOL SYSTEM</h1>
+      <p class="tagline">A SIGN OF QUALITY EDUCATION SINCE 1997</p>
+    </div>
+  </div>
+
+  <!-- Hamburger Icon -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Navigation Menu -->
+  <nav class="nav-menu" id="nav-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="programs.html">Academic Programs</a></li>
+      <li><a href="campuses.html">Our Campuses</a></li>
+      <li><a href="news.html">News & Events</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+  </header>
+  <main class="programs-container">
+
+  <!-- Title -->
+  <section data-animate>
+    <h1>Academic Programs</h1>
+    <p>
+      At Ali Kids Campus, our academic programs are designed to spark curiosity, build foundational skills, and prepare students for a dynamic future. We believe in joyful learning that balances structure with creativity, and rigor with empathy.
+    </p>
+  </section>
+
+  <!-- Program Categories -->
+  <section data-animate>
+    <h2>Programs by Age Group</h2>
+    <div class="program-grid">
+      <div class="program-card">
+        <h3>Preschool (3–5)</h3>
+        <p>Play-based learning, motor skills, early literacy, and social development in a nurturing environment.</p>
+      </div>
+      <div class="program-card">
+        <h3>Grades 1–5</h3>
+        <p>Core subjects, creative arts, and character-building activities.</p>
+      </div>
+      <div class="program-card">
+        <h3>Grades 6–8</h3>
+        <p>Advanced literacy, project-based science, leadership development, and digital skills.</p>
+      </div>
+      <div class="program-card">
+        <h3>Grades 9–10</h3>
+        <p>Career prep, electives, civic engagement, and real-world problem solving.</p>
+      </div>
+    </div>
+  </section>
+  <br>
+  <!-- Subject Highlights -->
+  <section data-animate>
+    <h2>Subject Highlights</h2>
+    <div class="subject-grid">
+      <div class="subject-box">📚 English Language Arts</div>
+      <div class="subject-box">🔢 Mathematics</div>
+      <div class="subject-box">🌍 Social Studies</div>
+      <div class="subject-box">🔬 Science </div>
+      <div class="subject-box">🎨 Visual & Performing Arts</div>
+      <div class="subject-box">🧘 Physical Education</div>
+      <div class="subject-box">💻 Computer Skills</div>
+      <div class="subject-box">🌱 Environmental Education</div>
+    </div>
+  </section>
+  <br>
+  <!-- Learning Approach -->
+  <section data-animate>
+    <h2>Our Learning Approach</h2>
+    <div class="timeline">
+      <div class="timeline-step">
+        <h4>🎯. Inquiry-Based Learning</h4>
+        <p>Students ask questions, explore ideas, and build knowledge through discovery.</p>
+      </div>
+      <div class="timeline-step">
+        <h4>🎯. Hands-On Activities</h4>
+        <p>Learning through experiments, art, building, and real-world simulations.</p>
+      </div>
+      <div class="timeline-step">
+        <h4>🎯. Collaborative Projects</h4>
+        <p>Group work that builds teamwork, communication, and leadership skills.</p>
+      </div>
+      <div class="timeline-step">
+        <h4>🎯. Personalized Support</h4>
+        <p>Teachers adapt lessons to meet each student’s strengths and needs.</p>
+      </div>
+      <div class="timeline-step">
+        <h4>🎯. Real-World Connections</h4>
+        <p>Lessons tied to current events, community issues, and global challenges.</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-animate>
+  <h2>A Day in the Life of Our Students</h2>
+  <div class="timeline">
+    <div class="timeline-step">
+      <h4>7:00 AM – Morning Arrival</h4>
+      <p>Students arrive, greet teachers, and settle in for the day.</p>
+    </div>
+    <div class="timeline-step">
+      <h4>7:30 AM – Morning Assembly</h4>
+      <p>We begin with a thought of the day, announcements, and a cheerful start.</p>
+    </div>
+    <div class="timeline-step">
+      <h4>8:00 AM – Core Subjects</h4>
+      <p>Focused learning in English, Math, and Science using Oxford curriculum.</p>
+    </div>
+    <div class="timeline-step">
+      <h4>10:30 AM – Break & Social Time</h4>
+      <p>Students relax, play, and connect with friends in a safe outdoor space.</p>
+    </div>
+    <div class="timeline-step">
+      <h4>11:00 AM – Creative Periods</h4>
+      <p>Art, music, or computer lab — where imagination comes alive.</p>
+    </div>
+    <div class="timeline-step">
+      <h4>12:30 PM – Wrap-Up & Reflection</h4>
+      <p>Students journal, share highlights, and prepare for the next day.</p>
+    </div>
+    <div class="timeline-step">
+      <h4>1:00 PM – Dismissal</h4>
+      <p>Students head home after a day of learning and growth.</p>
+    </div>
+  </div>
+</section><br>
+<section data-animate>
+  <h2>Why Parents Choose Ali Kids Campus</h2>
+  <ul class="values-list">
+    <li>📘 Trusted Oxford curriculum across all grades</li>
+    <li>🎓 Stream choices in Grades 9–10: Arts, Biology, or Computer Science</li>
+    <li>🌈 Inclusive and supportive learning environment</li>
+    <li>🎨 Emphasis on creativity, collaboration, and curiosity</li>
+    <li>📞 Transparent communication with families</li>
+    <li>🧠 Focus on holistic development — academic, emotional, and social</li>
+  </ul>
+</section><br>
+<section data-animate>
+  <h2>School Timings</h2>
+  <div class="experience-box">
+    <p><strong>Regular Timings:</strong> 7:00 AM to 1:00 PM</p>
+    <p><strong>Summer Timings:</strong> 7:30 AM to 1:00 PM</p>
+    <p><strong>Winter Timings:</strong> 8:00 AM to 1:00 PM</p>
+    <p><strong>Friday Timings:</strong> Till 12:00 PM</p>
+  </div>
+</section>
+
+
+
+  <!-- Call to Action -->
+  <section data-animate class="cta">
+    <p>Ready to explore our admissions or learn more?</p>
+    <a href="contact.html">Contact Us</a>
+  </section>
+
+</main>
+
+<footer style="background-color:#222; color:#eee; padding:40px 20px; font-family:'Poppins', sans-serif; font-size:14px;">
+  <div style="max-width:1100px; margin:auto; display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px;">
+
+    <!-- Contact Info -->
+    <div style="flex:1; min-width:220px;">
+      <h3 style="color:#ffcc00;">Contact</h3>
+      <p><i class="fas fa-phone" style="color:#ff1493;"></i> <a href="tel:+923028886368" style="color:#eee; text-decoration:none;">0302-8886368</a></p>
+      <p><i class="fas fa-phone" style="color:#ff1493;"></i> <a href="tel:+923154558227" style="color:#eee; text-decoration:none;">0315-4558227</a></p>
+    </div>
+
+    <!-- Addresses -->
+    <div style="flex:1; min-width:220px;">
+      <h3 style="color:#ffcc00;">Campuses</h3>
+      <p><i class="fas fa-map-marker-alt" style="color:#00ced1;"></i> 989 Ravi Block Allama Iqbal Town, Lahore</p>
+      <p><i class="fas fa-map-marker-alt" style="color:#00ced1;"></i> 30 Hadayat Ullah Block Mustafa Town, Lahore</p>
+    </div>
+
+    <!-- Facebook Links -->
+    <div style="flex:1; min-width:220px;">
+      <h3 style="color:#ffcc00;">Social</h3>
+      <p><i class="fab fa-facebook" style="color:#1877f2;"></i> <a href="https://www.facebook.com/search/top?q=Ali%20kids%20campus%20%26%20School%20System" target="_blank" style="color:#eee; text-decoration:none;">Ali Kids Campus & School System</a></p>
+      <p><i class="fab fa-facebook" style="color:#1877f2;"></i> <a href="https://www.facebook.com/search/top?q=Ali%20School%20System%20-%20senior%20campus" target="_blank" style="color:#eee; text-decoration:none;">Ali School System – Senior Campus</a></p>
+    </div>
+
+    <!-- Navigation -->
+    <div style="flex:1; min-width:220px;">
+      <h3 style="color:#ffcc00;">Quick Links</h3>
+      <p><a href="index.html" style="color:#eee; text-decoration:none;">Home</a></p>
+      <p><a href="about.html" style="color:#eee; text-decoration:none;">About Us</a></p>
+      <p><a href="programs.html" style="color:#eee; text-decoration:none;">Academic Programs</a></p>
+      <p><a href="campuses.html" style="color:#eee; text-decoration:none;">Our Campuses</a></p>
+      <p><a href="news.html" style="color:#eee; text-decoration:none;">News & Events</a></p>
+      <p><a href="contact.html" style="color:#eee; text-decoration:none;">Contact Us</a></p>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div style="text-align:center; margin-top:30px; font-size:13px; color:#aaa;">
+    © 2025 ALI KIDS CAMPUS & SCHOOL SYSTEM. All rights reserved.
+  </div>
+</footer>
+
+
+  <script src="script.js"></script>
+  <script>
+    const animatedSections = document.querySelectorAll('[data-animate]');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible'); // 👈 This makes it repeat!
+    }
+  });
+}, {
+  threshold: 0.3
+});
+
+animatedSections.forEach(section => observer.observe(section));
+
+  </script>
+</body>
+</html> 

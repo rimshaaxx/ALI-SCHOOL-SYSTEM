@@ -100,6 +100,8 @@ const animationObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('animated');
+    } else {
+      entry.target.classList.remove('animated'); // reset so it can re-trigger
     }
   });
 }, {
@@ -108,96 +110,5 @@ const animationObserver = new IntersectionObserver((entries) => {
 
 animatedElements.forEach(el => animationObserver.observe(el));
 
-///***review section */
-const stars = document.querySelectorAll('.review-form .stars span');
-const textarea = document.getElementById('review-text');
-const submitBtn = document.getElementById('submit-review');
-const reviewList = document.getElementById('review-list');
 
-let selectedRating = 0;
-
-// Load saved reviews from localStorage
-window.addEventListener('DOMContentLoaded', loadReviews);
-
-// Star rating interactions
-stars.forEach(star => {
-  star.addEventListener('mouseenter', () => {
-    const hoverVal = Number(star.dataset.value);
-    stars.forEach((s, i) => {
-      s.classList.toggle('active', i < hoverVal);
-    });
-  });
-  star.addEventListener('mouseleave', () => {
-    stars.forEach((s, i) => {
-      s.classList.toggle('active', i < selectedRating);
-    });
-  });
-  star.addEventListener('click', () => {
-    selectedRating = Number(star.dataset.value);
-    stars.forEach((s, i) => {
-      s.classList.toggle('active', i < selectedRating);
-    });
-  });
-});
-
-// Submit review
-submitBtn.addEventListener('click', () => {
-  const text = textarea.value.trim();
-  if (selectedRating === 0 || text === "") return;
-
-  const reviewData = {
-    rating: selectedRating,
-    text
-  };
-
-  addReviewToDOM(reviewData);
-  saveReview(reviewData);
-
-  // Reset form
-  textarea.value = "";
-  selectedRating = 0;
-  stars.forEach(s => s.classList.remove('active'));
-});
-
-// Add review to DOM
-function addReviewToDOM(reviewData, index = null) {
-  const review = document.createElement('div');
-  review.classList.add('review');
-  review.innerHTML = `
-    <div class="stars">${'★'.repeat(reviewData.rating)}</div>
-    <p>${reviewData.text}</p>
-    <span class="delete">❌</span>
-  `;
-
-  // Delete button
-  review.querySelector('.delete').addEventListener('click', () => {
-    review.remove();
-    deleteReview(index);
-  });
-
-  reviewList.prepend(review);
-}
-
-// Save review to localStorage
-function saveReview(reviewData) {
-  let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
-  reviews.push(reviewData);
-  localStorage.setItem('reviews', JSON.stringify(reviews));
-  loadReviews(); // reload to update delete indexes
-}
-
-// Load reviews from localStorage
-function loadReviews() {
-  reviewList.innerHTML = "";
-  let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
-  reviews.forEach((review, i) => addReviewToDOM(review, i));
-}
-
-// Delete review from localStorage
-function deleteReview(index) {
-  let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
-  reviews.splice(index, 1);
-  localStorage.setItem('reviews', JSON.stringify(reviews));
-  loadReviews();
-}
 

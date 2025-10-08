@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css" />
+     <style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #fdfdfd, #f0f8ff);
+    color: #333;
+  }
+
+  .contact-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+  }
+    [data-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+[data-animate].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+  h1 {
+    color: #142bff;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  h2 {
+    color: rgb(212, 0, 255);
+  }
+  h3 {
+    color: #2b2729;
+  }
+  p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+
+  .section {
+    padding: 60px 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+  }
+
+  .section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .contact-box {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+  }
+
+  .contact-box a {
+    color: #36031f;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .contact-box a:hover {
+    text-decoration: underline;
+  }
+
+  .map-frame {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+
+  .faq-list {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .faq-list li {
+    background-color: #e6f2ff;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .faq-list li:hover {
+    background-color: #d0e7ff;
+    transform: scale(1.03);
+  }
+</style>
+
+</head>
+<body>
+    <header>
+  <div class="branding" >
+    <img src="ass-logo.png" alt="School Logo" class="logo">
+    <div class="school-name">
+      <h1>ALI KIDS CAMPUS & SCHOOL SYSTEM</h1>
+      <p class="tagline">A SIGN OF QUALITY EDUCATION SINCE 1997</p>
+    </div>
+  </div>
+
+  <!-- Hamburger Icon -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+   <!-- Navigation Menu -->
+  <nav class="nav-menu" id="nav-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="programs.html">Academic Programs</a></li>
+      <li><a href="campuses.html">Our Campuses</a></li>
+      <li><a href="news.html">News & Events</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+  </header>
+  <main class="contact-container">
+
+  <!-- Intro -->
+  <section data-animate>
+    <h1>Contact Us</h1>
+    <p>
+      We’d love to hear from you! Whether you have a question, feedback, or want to explore admissions, we’re here to help. You can reach us by phone or connect with us on Facebook.
+    </p>
+  </section>
+
+  
+<br>
+  <!-- Location Info -->
+  <section data-animate class="contact-box">
+    <h2>Location</h2><br>
+    <p><strong>Address:</strong> 989 Ravi Block Allama Iqbal Town , Lahore</p>
+    <p><strong>Address:</strong> 30 Hadayat Ullah Block Mustafa Town , Lahore</p>
+    
+  </section>
+<br>
+<!-- Contact Details -->
+<section data-animate class="contact-box">
+  <h2>Phone Numbers</h2><br>
+  <p>
+    <i class="fas fa-phone" style="color:#ff1493; margin-right:8px;"></i>
+    <a href="tel:+923001234567">0302-8886368</a>
+  </p>
+  <p>
+    <i class="fas fa-phone" style="color:#ff1493; margin-right:8px;"></i>
+    <a href="tel:+923017654321">0315-4558227</a>
+  </p>
+</section>
+
+<!-- Facebook Links -->
+<section data-animate class="contact-box">
+  <h2>Facebook Pages</h2>
+  <p>
+    <i class="fab fa-facebook" style="color:#1877f2; margin-right:8px;"></i>
+    <a href="https://www.facebook.com/search/top?q=Ali%20kids%20campus%20%26%20School%20System" target="_blank">
+      Ali Kids Campus & School System
+    </a>
+  </p>
+  <p>
+    <i class="fab fa-facebook" style="color:#1877f2; margin-right:8px;"></i>
+    <a href="https://www.facebook.com/search/top?q=Ali%20School%20System%20-%20senior%20campus" target="_blank">
+      Ali School System – Senior Campus
+    </a>
+  </p>
+</section>
+
+  <!-- Office Hours -->
+  <section data-animate class="contact-box">
+    <h2>Office Hours</h2><br>
+    <p><strong>Monday to Thursday:</strong> 8:00 AM – 1:00 PM</p>
+    <p><strong>Friday:</strong> 8:00 AM – 12:00 PM</p>
+    
+  </section>
+<br>
+  <!-- FAQ Section -->
+  <section data-animate>
+    <h2>Frequently Asked Questions</h2><br>
+    <ul class="faq-list">
+      <li>
+        <strong>What are your school timings?</strong><br>
+        Regular: 7:00 AM – 1:00 PM. Friday: till 12:00 PM. Summer and winter timings vary slightly.
+      </li>
+      <li>
+        <strong>Do you offer admissions mid-year?</strong><br>
+        Yes, subject to availability and assessment.
+      </li>
+      <li>
+        <strong>Is there a play area?</strong><br>
+        We have open grounds and indoor activity spaces for creative engagement.
+      </li>
+      <li>
+        <strong>Which curriculum do you follow?</strong><br>
+        We use Oxford books across all grades.
+      </li>
+      <li>
+        <strong>How can I ask a question?</strong><br>
+        Call us or message us on Facebook — we’ll respond promptly.
+      </li>
+    </ul>
+  </section>
+
+</main>
+<footer style="background-color:#222; color:#eee; padding:40px 20px; font-family:'Poppins', sans-serif; font-size:14px;">
+  <div style="max-width:1100px; margin:auto; display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px;">
+
+    <!-- Contact Info -->
+    <div style="flex:1; min-width:220px;">
+      <h3 style="color:#ffcc00;">Contact</h3>
+      <p><i class="fas fa-phone" style="color:#ff1493;"></i> <a href="tel:+923028886368" style="color:#eee; text-decoration:none;">0302-8886368</a></p>
+      <p><i class="fas fa-phone" style="color:#ff1493;"></i> <a href="tel:+923154558227" style="color:#eee; text-decoration:none;">0315-4558227</a></p>
+    </div>
+
+    <!-- Addresses -->
+    <div style="flex:1; min-width:220px;">
+      <h3 style="color:#ffcc00;">Campuses</h3>
+      <p><i class="fas fa-map-marker-alt" style="color:#00ced1;"></i> 989 Ravi Block Allama Iqbal Town, Lahore</p>
+      <p><i class="fas fa-map-marker-alt" style="color:#00ced1;"></i> 30 Hadayat Ullah Block Mustafa Town, Lahore</p>
+    </div>
+
+    <!-- Facebook Links -->
+    <div style="flex:1; min-width:220px;">
+      <h3 style="color:#ffcc00;">Social</h3>
+      <p><i class="fab fa-facebook" style="color:#1877f2;"></i> <a href="https://www.facebook.com/search/top?q=Ali%20kids%20campus%20%26%20School%20System" target="_blank" style="color:#eee; text-decoration:none;">Ali Kids Campus & School System</a></p>
+      <p><i class="fab fa-facebook" style="color:#1877f2;"></i> <a href="https://www.facebook.com/search/top?q=Ali%20School%20System%20-%20senior%20campus" target="_blank" style="color:#eee; text-decoration:none;">Ali School System – Senior Campus</a></p>
+    </div>
+
+    <!-- Navigation -->
+    <div style="flex:1; min-width:220px;">
+      <h3 style="color:#ffcc00;">Quick Links</h3>
+      <p><a href="index.html" style="color:#eee; text-decoration:none;">Home</a></p>
+      <p><a href="about.html" style="color:#eee; text-decoration:none;">About Us</a></p>
+      <p><a href="programs.html" style="color:#eee; text-decoration:none;">Academic Programs</a></p>
+      <p><a href="campuses.html" style="color:#eee; text-decoration:none;">Our Campuses</a></p>
+      <p><a href="news.html" style="color:#eee; text-decoration:none;">News & Events</a></p>
+      <p><a href="contact.html" style="color:#eee; text-decoration:none;">Contact Us</a></p>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div style="text-align:center; margin-top:30px; font-size:13px; color:#aaa;">
+    © 2025 ALI KIDS CAMPUS & SCHOOL SYSTEM. All rights reserved.
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+  <script>
+    const animatedSections = document.querySelectorAll('[data-animate]');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible');
+    }
+  });
+}, { threshold: 0.3 });
+animatedSections.forEach(section => observer.observe(section));
+
+  </script>
+
+</body>
+</html> 

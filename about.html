@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css" />
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #fdfdfd, #f0f8ff);
+    color: #333;
+  }
+
+  .about-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+  }
+
+  h1, h2 {
+    font-size: 32px;
+    color: #143fff;
+    margin-bottom: 20px;
+    position: relative;
+    animation: slideInLeft 1s ease forwards;
+  }
+
+  
+  p {
+    font-size: 18px;
+    line-height: 1.8;
+    animation: fadeIn 1.5s ease forwards;
+  }
+[data-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+[data-animate].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+  .section:nth-child(odd) {
+    background: linear-gradient(to right, #ffe4e1, #fff0f5);
+  }
+
+  .section:nth-child(even) {
+    background: linear-gradient(to right, #e0ffff, #f0fff0);
+  }
+
+  .flex-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .flex-row img {
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+  }
+
+  .flex-row img:hover {
+    transform: rotate(-2deg) scale(1.05);
+  }
+
+  .values-list {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+
+  .values-list li {
+    background-color: #e6f2ff;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .values-list li:hover {
+    background-color: #d0e7ff;
+    transform: scale(1.05);
+  }
+
+  .cta {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 40px;
+  }
+
+  .cta a {
+    background: linear-gradient(to right, #ff69b4, #ff1493);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .cta a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.7);
+  }
+
+  @keyframes slideInLeft {
+    from { transform: translateX(-100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+
+</head>
+<body>
+  <!-- Navbar (same as your main page) -->
+  <header>
+  <div class="branding" >
+    <img src="ass-logo.png" alt="School Logo" class="logo">
+    <div class="school-name">
+      <h1>ALI KIDS CAMPUS & SCHOOL SYSTEM</h1>
+      <p class="tagline">A SIGN OF QUALITY EDUCATION SINCE 1997</p>
+    </div>
+  </div>
+
+  <!-- Hamburger Icon -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Navigation Menu -->
+  <nav class="nav-menu" id="nav-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="programs.html">Academic Programs</a></li>
+      <li><a href="campuses.html">Our Campuses</a></li>
+      <li><a href="news.html">News & Events</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+  </header>
+  
+  <main class="about-container">
+
+  <!-- About Us -->
+  <section data-animate class="section">
+    <h1>About Us</h1>
+    <p>
+        At <strong>ALI KIDS CAMPUS & SCHOOL SYSTEM</strong>, we believe that every child carries within them the spark of greatness waiting to be nurtured. Since our founding in 1997, our mission has been to provide a safe, inspiring, and intellectually stimulating environment where students are encouraged to explore, question, and grow into confident individuals. Guided by the vision of shaping future leaders with strong values, creativity, and academic excellence, we strive to blend modern teaching methods with a deep respect for cultural and moral foundations. Under the dedicated leadership of <strong>Principal Ali Raza</strong>, our school continues to uphold its reputation as <em>“A Sign of Quality Education”</em>, ensuring that each student not only excels in academics but also develops the character and resilience needed to thrive in life.
+
+      Ali Kids Campus is a joyful learning space where curiosity, creativity, and kindness come together. We believe that education should be a journey of discovery — not just through books, but through relationships, experiences, and imagination. Our school is built on the belief that every child deserves to feel safe, inspired, and empowered to grow into their best self.
+    </p>
+  </section>
+
+  <!-- Our Mission -->
+  <section data-animate class="section flex-row ">
+    <div style="flex: 1;">
+      <h2>Our Mission</h2>
+      <p>
+        Our mission is to nurture confident, compassionate learners who are ready to thrive in a changing world. We focus on holistic development — academic, emotional, and social — through hands-on learning, creative expression, and community connection. Every child is encouraged to explore their passions, challenge their limits, and grow into thoughtful citizens.
+      </p>
+    </div>
+    <img src="our mission.jpeg" alt="Mission Image" />
+  </section>
+
+  <!-- Our Vision -->
+  <section data-animate class="section flex-row">
+    <div style="flex: 1;">
+      <h2>Our Vision</h2>
+      <p>
+        We envision a future where education empowers every child to lead with empathy, think critically, and act responsibly. Our school strives to be a beacon of innovation and inclusivity — a place where diversity is celebrated, ideas are welcomed, and students are prepared to make meaningful contributions to their communities and the world.
+      </p>
+    </div>
+    <img src="our vision.jpeg" alt="Vision Image" />
+  </section>
+
+  <!-- Core Values -->
+  <section data-animate class="section">
+    <h2>Our Core Values</h2>
+    <ul class="values-list">
+      <li>🌱 Respect for self and others</li>
+      <li>📚 Love of learning</li>
+      <li>🎨 Creativity and expression</li>
+      <li>🤝 Collaboration and teamwork</li>
+      <li>🌍 Global awareness</li>
+      <li>💡 Curiosity and innovation</li>
+    </ul>
+  </section>
+
+  <!-- Principal's Message -->
+  <section data-animate class="section flex-row visible" >
+    <div style="flex: 1;">
+      <h2>Message from the Principal</h2>
+      <p>
+        Dear Parents and Students,<br><br>
+        Welcome to Ali Kids Campus — a place where every child is seen, heard, and valued. As Principal, I am proud to lead a team of passionate educators who believe in the power of kindness, creativity, and connection. We are committed to creating a safe, inclusive, and dynamic environment where students thrive not just academically, but as whole individuals. Thank you for being part of our journey.
+      </p>
+      <p><strong>– Mr. Ali Raza, Principal</strong></p>
+    </div>
+    <img src="principal.png" alt="Principal Image" />
+  </section>
+
+  <!-- Call to Action -->
+  <div data-animate class="cta section" >
+    <p>Ready to explore our academic programs?</p><br>
+    <a href="programs.html">Visit Programs Page</a>
+  </div>
+
+</main>
+
+ <footer style="background-color:#222; color:#eee; padding:40px 20px; font-family:'Poppins', sans-serif; font-size:14px;">
+  <div style="max-width:1100px; margin:auto; display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px;">
+
+    <!-- Contact Info -->
+    <div style="flex:1; min-width:220px;">
+      <h3 style="color:#ffcc00;">Contact</h3>
+      <p><i class="fas fa-phone" style="color:#ff1493;"></i> <a href="tel:+923028886368" style="color:#eee; text-decoration:none;">0302-8886368</a></p>
+      <p><i class="fas fa-phone" style="color:#ff1493;"></i> <a href="tel:+923154558227" style="color:#eee; text-decoration:none;">0315-4558227</a></p>
+    </div>
+
+    <!-- Addresses -->
+    <div style="flex:1; min-width:220px;">
+      <h3 style="color:#ffcc00;">Campuses</h3>
+      <p><i class="fas fa-map-marker-alt" style="color:#00ced1;"></i> 989 Ravi Block Allama Iqbal Town, Lahore</p>
+      <p><i class="fas fa-map-marker-alt" style="color:#00ced1;"></i> 30 Hadayat Ullah Block Mustafa Town, Lahore</p>
+    </div>
+
+    <!-- Facebook Links -->
+    <div style="flex:1; min-width:220px;">
+      <h3 style="color:#ffcc00;">Social</h3>
+      <p><i class="fab fa-facebook" style="color:#1877f2;"></i> <a href="https://www.facebook.com/search/top?q=Ali%20kids%20campus%20%26%20School%20System" target="_blank" style="color:#eee; text-decoration:none;">Ali Kids Campus & School System</a></p>
+      <p><i class="fab fa-facebook" style="color:#1877f2;"></i> <a href="https://www.facebook.com/search/top?q=Ali%20School%20System%20-%20senior%20campus" target="_blank" style="color:#eee; text-decoration:none;">Ali School System – Senior Campus</a></p>
+    </div>
+
+    <!-- Navigation -->
+    <div style="flex:1; min-width:220px;">
+      <h3 style="color:#ffcc00;">Quick Links</h3>
+      <p><a href="index.html" style="color:#eee; text-decoration:none;">Home</a></p>
+      <p><a href="about.html" style="color:#eee; text-decoration:none;">About Us</a></p>
+      <p><a href="programs.html" style="color:#eee; text-decoration:none;">Academic Programs</a></p>
+      <p><a href="campuses.html" style="color:#eee; text-decoration:none;">Our Campuses</a></p>
+      <p><a href="news.html" style="color:#eee; text-decoration:none;">News & Events</a></p>
+      <p><a href="contact.html" style="color:#eee; text-decoration:none;">Contact Us</a></p>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div style="text-align:center; margin-top:30px; font-size:13px; color:#aaa;">
+    © 2025 ALI KIDS CAMPUS & SCHOOL SYSTEM. All rights reserved.
+  </div>
+</footer>
+
+
+  <script src="script.js"></script>
+  <script>
+ const animatedBlocks = document.querySelectorAll('[data-animate]');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible'); // 👈 This makes it repeat!
+    }
+  });
+}, {
+  threshold: 0.3
+});
+
+animatedBlocks.forEach(block => observer.observe(block));
+
+  </script>
+</body>
+</html>

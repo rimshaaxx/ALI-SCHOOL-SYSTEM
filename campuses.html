@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Campuses</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css" />
+    <style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #fdfdfd, #f0f8ff);
+    color: #333;
+  }
+
+  .campus-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+  }
+
+  h1 {
+    color: #4714ff;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  h2, h3 {
+    color: #ff1414;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+
+  .section {
+    padding: 60px 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+  }
+
+  .section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .campus-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .campus-card img {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .campus-card img:hover {
+    transform: scale(1.05);
+  }
+
+  .map-frame {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+
+  .facilities-list {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .facilities-list li {
+    background-color: #e6f2ff;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .facilities-list li:hover {
+    background-color: #d0e7ff;
+    transform: scale(1.05);
+  }
+
+  .reach-box {
+    background-color: #fff8e1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+  }
+
+  .reach-box:hover {
+    transform: scale(1.02);
+  }
+   [data-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+[data-animate].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+</style>
+
+</head>
+<body>
+    <header>
+  <div class="branding" >
+    <img src="ass-logo.png" alt="School Logo" class="logo">
+    <div class="school-name">
+      <h1>ALI KIDS CAMPUS & SCHOOL SYSTEM</h1>
+      <p class="tagline">A SIGN OF QUALITY EDUCATION SINCE 1997</p>
+    </div>
+  </div>
+
+  <!-- Hamburger Icon -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+   <!-- Navigation Menu -->
+  <nav class="nav-menu" id="nav-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="programs.html">Academic Programs</a></li>
+      <li><a href="campuses.html">Our Campuses</a></li>
+      <li><a href="news.html">News & Events</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+  </header>
+  
+  <main class="campus-container">
+
+  <!-- Intro -->
+  <section data-animate>
+    <h1>Our Campuses</h1>
+    <p>
+      Ali Kids Campus proudly operates two vibrant campuses, each offering a safe, nurturing environment rooted in our shared values. Whether you're visiting our main location or our second branch, you'll find the same commitment to joyful learning, academic excellence, and community care.
+    </p>
+  </section>
+
+  <!-- Campus 1 -->
+  <section data-animate class="campus-card">
+    <div style="flex: 1;">
+      <h2>A.I.T Campus</h2>
+      <p><strong>Address:</strong> 989 Ravi Block Allama Iqbal Town, Lahore</p>
+      <p><strong>Contact:</strong> 0302-8886368</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3401.572685447676!2d74.27869550000001!3d31.5084274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391903a7bae504e1%3A0xad35cb8efd99aafb!2sAli%20School%20System!5e0!3m2!1sen!2s!4v1759892129458!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </div>
+    <img src="school1.jpg" alt="A.I.T Campus Image" />
+  </section>
+
+  <!-- Campus 2 -->
+  <section data-animate class="campus-card">
+    <div style="flex: 1;">
+      <h2>Mustafa Town Campus</h2>
+      <p><strong>Address:</strong> 30 Hadayat Ullah Block Mustafa Town, Lahore</p>
+      <p><strong>Contact:</strong> 0315-4558227</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.0224276803688!2d74.27168937476938!3d31.496067348343782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391903b0570a8ad9%3A0xe93a95f77bc5d662!2sAli%20School%20System!5e0!3m2!1sen!2s!4v1759892928652!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </div>
+    <img src="school2.jpg" alt=Mustafa Town Campus Image" />
+  </section>
+
+  <!-- Facilities Overview -->
+  <section data-animate>
+    <h2>Facilities Overview</h2>
+    <ul class="facilities-list">
+      <li>🏫 Well-lit, spacious classrooms</li>
+      <li>🔬 Dedicated science lab</li>
+      <li>🌿 Clean and green environment</li>
+      <li>⚽ Open ground for activities</li>
+      <li>🔐 Secure premises with monitored entry</li>
+      <li>🧼 Hygienic washrooms and sanitation</li>
+    </ul>
+  </section>
+</main>
+<footer style="background-color:#222; color:#eee; padding:40px 20px; font-family:'Poppins', sans-serif; font-size:14px;">
+  <div style="max-width:1100px; margin:auto; display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px;">
+
+    <!-- Contact Info -->
+    <div style="flex:1; min-width:220px;">
+      <h3 style="color:#ffcc00;">Contact</h3>
+      <p><i class="fas fa-phone" style="color:#ff1493;"></i> <a href="tel:+923028886368" style="color:#eee; text-decoration:none;">0302-8886368</a></p>
+      <p><i class="fas fa-phone" style="color:#ff1493;"></i> <a href="tel:+923154558227" style="color:#eee; text-decoration:none;">0315-4558227</a></p>
+    </div>
+
+    <!-- Addresses -->
+    <div style="flex:1; min-width:220px;">
+      <h3 style="color:#ffcc00;">Campuses</h3>
+      <p><i class="fas fa-map-marker-alt" style="color:#00ced1;"></i> 989 Ravi Block Allama Iqbal Town, Lahore</p>
+      <p><i class="fas fa-map-marker-alt" style="color:#00ced1;"></i> 30 Hadayat Ullah Block Mustafa Town, Lahore</p>
+    </div>
+    <!-- Facebook Links -->
+    <div style="flex:1; min-width:220px;">
+      <h3 style="color:#ffcc00;">Social</h3>
+      <p><i class="fab fa-facebook" style="color:#1877f2;"></i> <a href="https://www.facebook.com/search/top?q=Ali%20kids%20campus%20%26%20School%20System" target="_blank" style="color:#eee; text-decoration:none;">Ali Kids Campus & School System</a></p>
+      <p><i class="fab fa-facebook" style="color:#1877f2;"></i> <a href="https://www.facebook.com/search/top?q=Ali%20School%20System%20-%20senior%20campus" target="_blank" style="color:#eee; text-decoration:none;">Ali School System – Senior Campus</a></p>
+    </div>
+
+    <!-- Navigation -->
+    <div style="flex:1; min-width:220px;">
+      <h3 style="color:#ffcc00;">Quick Links</h3>
+      <p><a href="index.html" style="color:#eee; text-decoration:none;">Home</a></p>
+      <p><a href="about.html" style="color:#eee; text-decoration:none;">About Us</a></p>
+      <p><a href="programs.html" style="color:#eee; text-decoration:none;">Academic Programs</a></p>
+      <p><a href="campuses.html" style="color:#eee; text-decoration:none;">Our Campuses</a></p>
+      <p><a href="news.html" style="color:#eee; text-decoration:none;">News & Events</a></p>
+      <p><a href="contact.html" style="color:#eee; text-decoration:none;">Contact Us</a></p>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div style="text-align:center; margin-top:30px; font-size:13px; color:#aaa;">
+    © 2025 ALI KIDS CAMPUS & SCHOOL SYSTEM. All rights reserved.
+  </div>
+</footer>
+
+
+  <script src="script.js"></script>
+  <script>
+    const animatedSections = document.querySelectorAll('[data-animate]');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible');
+    }
+  });
+}, { threshold: 0.3 });
+animatedSections.forEach(section => observer.observe(section));
+
+  </script>
+</body>
+</html> 
