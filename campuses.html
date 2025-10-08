@@ -81,7 +81,23 @@
     border-radius: 10px;
     margin-top: 20px;
   }
+  .map-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
 
+.map-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
   .facilities-list {
     list-style: none;
     padding-left: 0;
@@ -174,8 +190,9 @@
       <h2>A.I.T Campus</h2>
       <p><strong>Address:</strong> 989 Ravi Block Allama Iqbal Town, Lahore</p>
       <p><strong>Contact:</strong> 0302-8886368</p>
+      <div class="map-wrapper">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3401.572685447676!2d74.27869550000001!3d31.5084274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391903a7bae504e1%3A0xad35cb8efd99aafb!2sAli%20School%20System!5e0!3m2!1sen!2s!4v1759892129458!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+      </div>
     </div>
     <img src="school1.jpg" alt="A.I.T Campus Image" />
   </section>
@@ -186,8 +203,9 @@
       <h2>Mustafa Town Campus</h2>
       <p><strong>Address:</strong> 30 Hadayat Ullah Block Mustafa Town, Lahore</p>
       <p><strong>Contact:</strong> 0315-4558227</p>
+      <div class="map-wrapper" >
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.0224276803688!2d74.27168937476938!3d31.496067348343782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391903b0570a8ad9%3A0xe93a95f77bc5d662!2sAli%20School%20System!5e0!3m2!1sen!2s!4v1759892928652!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+    </div>
     </div>
     <img src="school2.jpg" alt=Mustafa Town Campus Image" />
   </section>
